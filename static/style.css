@@ -1,0 +1,549 @@
+@charset "UTF-8";
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
+
+body * {
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+@font-face {
+  /* Thin */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  /* Light */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  /* Regular */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  /* Medium */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  /* Semi Bold */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  /* Bold */
+  font-family: "SF Pro Text";
+  src: url("./font/sf_pro_text_bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+.number {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "frac", "tnum";
+  font-family: "SF Pro Text", sans-serif;
+}
+
+.dashed-top {
+  background-image: linear-gradient(to right, black, black 4px, transparent 2px, transparent 8px);
+  background-size: 6px 1px;
+  background-position: left top;
+  background-repeat: repeat-x;
+}
+
+.dashed-bottom {
+  background-image: linear-gradient(to right, #afbac5, #afbac5 3px, transparent 2px, transparent 8px);
+  background-size: 6px 1px;
+  background-position: left bottom;
+  background-repeat: repeat-x;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+body .page > .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 6px 10px;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  z-index: 1000;
+}
+body .page.page2 > .header {
+  position: absolute;
+}
+
+.back-btn {
+  height: 16px;
+  width: 16px;
+  margin: 10px;
+}
+
+.enter {
+  position: relative;
+  height: 32px;
+  outline: none;
+  width: 156px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.enter .frames {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: gotoAnim400ms 2020ms infinite;
+  inset: 0;
+}
+.enter .frames[data-fid="1"] {
+  animation-delay: 1500ms;
+}
+.enter .frames[data-fid="2"] {
+  animation-delay: 1540ms;
+}
+.enter .frames[data-fid="3"] {
+  animation-delay: 1580ms;
+}
+.enter .frames[data-fid="4"] {
+  animation-delay: 1620ms;
+}
+.enter .frames[data-fid="5"] {
+  animation-delay: 1660ms;
+}
+.enter .frames[data-fid="6"] {
+  animation-delay: 1700ms;
+}
+.enter .frames[data-fid="7"] {
+  animation-delay: 1740ms;
+}
+.enter .frames[data-fid="8"] {
+  animation-delay: 1780ms;
+}
+.enter .frames[data-fid="9"] {
+  animation-delay: 1820ms;
+}
+.enter .frames[data-fid="10"] {
+  animation-delay: 1860ms;
+}
+.enter .frames[data-fid="11"] {
+  animation-delay: 1900ms;
+}
+.enter .frames[data-fid="12"] {
+  animation-delay: 1940ms;
+}
+.enter .frames[data-fid="13"] {
+  animation-delay: 1980ms;
+}
+.enter .frames[data-fid="14"] {
+  animation: gotoAnim1500ms 2020ms infinite;
+}
+@keyframes gotoAnim400ms {
+  0% {
+    opacity: 1;
+  }
+  1.9801980% {
+    opacity: 1;
+  }
+  1.99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes gotoAnim1500ms {
+  0% {
+    opacity: 1;
+  }
+  74.2574257% {
+    opacity: 1;
+  }
+  74.26% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.main {
+  padding: 44px 0 0;
+}
+
+.page1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.page2 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  transition: top 0.3s ease-out;
+}
+
+.page2.show {
+  top: 0;
+}
+
+.page2 {
+  background-color: #f4f4f4;
+}
+
+.page2 .header {
+  position: absolute;
+}
+
+.page2 .main {
+  height: 100vh;
+}
+
+.timestamp-container {
+  background-color: #31a8b5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: white;
+  font-weight: 600;
+}
+
+.timestamp .number {
+  font-feature-settings: "tnum";
+}
+
+.digit {
+  display: inline-block;
+  width: 1ch;
+  /* 1文字ぶんの幅 */
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.sep {
+  width: 0.5ch;
+}
+
+.event-card {
+  margin: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.event-card .content {
+  display: flex;
+  padding: 12px;
+  flex-direction: column;
+  gap: 6px;
+}
+.event-card .content .year {
+  padding: 0;
+}
+.event-card .content .year span {
+  display: block;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 500;
+}
+.event-card .content .date-time {
+  display: flex;
+  align-items: end;
+  height: 36px;
+  gap: 12px;
+}
+.event-card .content .date-time p {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+}
+.event-card .content .date-time span {
+  line-height: 1;
+}
+.event-card .content .date-time .date .mmdd {
+  font-size: 28px;
+  font-weight: 400;
+}
+.event-card .content .date-time .date .weekday {
+  font-size: 11px;
+  font-weight: 400;
+}
+.event-card .content .date-time .date .weekday .sun {
+  color: #ef4b46;
+}
+.event-card .content .date-time .date .weekday .sat {
+  color: #668fea;
+}
+.event-card .content .date-time .times {
+  position: relative;
+  display: flex;
+  padding: 2px 0;
+  line-height: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+.event-card .content .date-time .times .time {
+  display: flex;
+  align-items: baseline;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 4px;
+  letter-spacing: -0.02em;
+}
+.event-card .content .date-time .times .value {
+  display: inline-block;
+  text-align: right;
+}
+.event-card .content .date-time .times .value span {
+  font-weight: 600;
+}
+.event-card .content .multidays p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+.event-card .content .title span {
+  display: block;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 700;
+}
+.event-card .content .venue span {
+  display: block;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.ticket-card {
+  margin: 10px;
+  /* background-color: #f7f7f7; */
+  /* background-color: #e0e3e9; */
+  background-color: #f5d4e6;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.ticket-card .content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.ticket-card .content .ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  color: white;
+  background-color: #ea549c;
+}
+.ticket-card .content .ticket-header .name {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+.ticket-card .content .ticket-header .index {
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 300;
+}
+.ticket-card .content .ticket-main {
+  display: flex;
+  padding: 8px;
+  background-color: #fdecf5;
+  flex-direction: column;
+  gap: 8px;
+}
+.ticket-card .content .ticket-main .ticket-info {
+  display: flex;
+  align-items: stretch;
+  height: 90px;
+  gap: 12px;
+}
+.ticket-card .content .ticket-main .ticket-info .status {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+}
+.ticket-card .content .ticket-main .ticket-info .status .icon {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: 96%;
+  object-fit: contain;
+}
+.ticket-card .content .ticket-main .ticket-info .status .icon-used {
+  visibility: hidden;
+}
+.ticket-card .content .ticket-main .ticket-info .info-list {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding: 6px 0 0;
+  font-size: 14px;
+  line-height: 1;
+  flex-direction: column;
+  gap: 7px;
+}
+.ticket-card .content .ticket-main .ticket-info .info-list .name {
+  font-size: 16px;
+  font-weight: 700;
+}
+.ticket-card .content .ticket-main .ticket-info .info-list .prefix {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ticket-card .content .ticket-main .ticket-info .info-list .reference {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ticket-card .content .ticket-main .ticket-info .info-list .price {
+  font-size: 13px;
+  font-weight: 500;
+}
+.ticket-card .content .ticket-main .ticket-info .used-stamp {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.ticket-card .content .ticket-main .ticket-info .used-stamp .icon {
+  display: block;
+  width: auto;
+  height: 80%;
+  visibility: hidden;
+  object-fit: contain;
+}
+.ticket-card .content .ticket-main .transfer {
+  display: flex;
+  height: 32px;
+}
+.ticket-card .content .ticket-main .transfer .button {
+  margin: 2px;
+}
+.ticket-card .content .ticket-main .transfer .button .icon {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+.ticket-card .content .description {
+  position: relative;
+  display: flex;
+  height: auto;
+  margin: 8px 0;
+  transition: height 0.3s ease;
+  flex-direction: column;
+  overflow: hidden;
+}
+.ticket-card .content .description p {
+  overflow-wrap: break-word;
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+.ticket-card .content .description .content {
+  padding: 0 36px 2px 8px;
+  border-bottom: 1px solid #ccc;
+}
+.ticket-card .content .description .content a.back-info {
+  color: #0e7aff;
+  text-decoration: none;
+}
+.ticket-card .content .description .footer {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px 36px 0 8px;
+  flex-direction: column;
+}
+.ticket-card .content .description .footer p {
+  font-size: 12px;
+  font-weight: 500;
+}
+.ticket-card .content .description .footer .ticket-number {
+  color: #0e7aff;
+}
+.ticket-card .content .description .footer .ticket-used-date {
+  display: none;
+}
+.ticket-card .content .arrow-button {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+}
+.ticket-card .content .arrow-button .icon {
+  width: 100%;
+  height: 100%;
+}
+.ticket-card.used {
+  background-color: #e1e3e9;
+}
+.ticket-card.used .content .ticket-header {
+  background-color: #b8c1cb;
+}
+.ticket-card.used .content .ticket-main {
+  background-color: #fafafa;
+}
+.ticket-card.used .content .ticket-main .ticket-info .status .icon-unused {
+  visibility: hidden;
+}
+.ticket-card.used .content .ticket-main .ticket-info .status .icon-used {
+  visibility: visible;
+}
+.ticket-card.used .content .ticket-main .ticket-info .used-stamp .icon {
+  visibility: visible;
+}
+.ticket-card.used .content .ticket-main .transfer {
+  display: none;
+}
+.ticket-card.used .content .description .footer .ticket-used-date {
+  display: block;
+}

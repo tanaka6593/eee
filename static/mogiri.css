@@ -1,0 +1,495 @@
+.page2 {
+    background-color: #f4f4f4;
+}
+
+.page2 .header {
+    position: absolute;
+}
+
+.selected-ticket-count {
+    margin: 0;
+    font-size: 14px;
+}
+
+#selected-ticket-count.selected {
+    color: #f670a1;
+}
+
+.close-btn {
+    width: 16px;
+    height: 16px;
+    margin: 10px;
+}
+
+.timestamp-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    background-color: #31a8b5;
+}
+
+.timestamp {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.timestamp .number {
+    font-feature-settings: "tnum";
+}
+
+.digit {
+    display: inline-block;
+    width: 1ch;
+
+    /* 1文字ぶんの幅 */
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.sep {
+    width: 0.5ch;
+}
+
+.mogiri-card-section {
+    position: relative;
+    display: flex;
+    height: calc(100% - 64px - 29px);
+    margin: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.mogiri-card {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    aspect-ratio: 19 / 7;
+    background-color: white;
+}
+
+.mogiri-card-background {
+    position: absolute;
+    inset: 0;
+}
+
+.mogiri-card-main {
+    position: absolute;
+    inset: 0;
+}
+
+.mogiri-date-only {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.mogiri-multi-date {
+    margin: 8px auto;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+
+.mogiri-date-time {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 36px;
+    gap: 12px;
+}
+
+.mogiri-date-time p {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+}
+
+.mogiri-date-time span {
+    line-height: 1;
+}
+
+.mogiri-date-text {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.mogiri-weekday {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.mogiri-weekday-name {
+    color: #668fea;
+}
+
+.mogiri-times {
+    position: relative;
+    display: flex;
+    padding: 2px 0;
+    line-height: 1;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mogiri-time-value {
+    display: inline-block;
+    text-align: right;
+}
+
+.mogiri-open,
+.mogiri-start {
+    display: flex;
+    align-items: baseline;
+    font-size: 13px;
+    font-weight: 700;
+    gap: 4px;
+    letter-spacing: -0.02em;
+}
+
+.mogiri-card-touch {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 23vw;
+    inset: 0;
+}
+
+.mogiri-card-touch-image {
+    width: 9vw;
+    height: 9vw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.mogiri-title-venue {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.mogiri-title-text {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.mogiri-venue-text {
+    display: block;
+    font-size: 9px;
+    line-height: 1;
+}
+
+.mogiri-card-used {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    animation-delay: 500ms;
+    background-color: #dc426d;
+    inset: 0;
+}
+
+.mogiri-card-used-content {
+    color: white;
+    font-size: 18px;
+}
+
+.mogiri-card-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mogiri-card-foreground {
+    position: absolute;
+    visibility: hidden;
+    inset: 0;
+}
+
+.mogiri-card-foreground-gate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.mogiri-card-foreground-image {
+    height: 20%;
+}
+
+.mogiri-card-foreground-gate-animation {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+}
+
+.gate-frame {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    margin: 0 auto;
+    opacity: 0;
+    animation: frameAnim 600ms linear infinite;
+}
+
+.gate-frame.frame1 {
+    animation-delay: 0ms;
+}
+
+.gate-frame.frame2 {
+    animation-delay: 100ms;
+}
+
+.gate-frame.frame3 {
+    animation-delay: 200ms;
+}
+
+.gate-frame.frame4 {
+    animation-delay: 300ms;
+}
+
+.gate-frame.frame5 {
+    animation-delay: 400ms;
+}
+
+.gate-frame.frame6 {
+    animation-delay: 500ms;
+}
+
+@keyframes frameAnim {
+    0% {
+        opacity: 1;
+    }
+
+    16.66% {
+        opacity: 1;
+    }
+
+    16.67% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.mogiri-caution {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+.mogiri-caution-text {
+    width: 86vw;
+    margin: 0 auto;
+    padding: 8px;
+    color: red;
+    font-size: 14px;
+    line-height: 1.5;
+    background-color: yellow;
+    font-weight: 700;
+}
+
+.select-ticket-list {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.select-ticket-card {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    padding-top: 1px;
+}
+
+.select-ticket-card.selected {
+    background-color: #eb519b;
+}
+
+.select-ticket-header {
+    padding: 12px;
+}
+
+.used .select-ticket-header {
+    background-color: #eb519b;
+}
+
+.select-ticket-owner-name {
+    margin: 0;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.selected .select-ticket-owner-name,
+.used .select-ticket-owner-name {
+    color: white;
+}
+
+.select-ticket-main {
+    display: flex;
+    flex-direction: column;
+}
+
+.used .select-ticket-main {
+    background-color: #eee;
+}
+
+.select-ticket-info {
+    display: flex;
+    align-items: stretch;
+    margin: 0 12px;
+    padding: 12px 0;
+    border-top: 1px solid #ccc;
+    gap: 20px;
+}
+
+.selected .select-ticket-info {
+    border-top: 1px solid white;
+}
+
+.select-ticket-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16vw;
+    height: 16vw;
+}
+
+.select-ticket-icon-selected,
+.select-ticket-icon-unselected,
+.select-ticket-icon-used {
+    position: absolute;
+    width: 16vw;
+    height: 16vw;
+}
+
+.select-ticket-icon-selected {
+    visibility: hidden;
+}
+
+.selected .select-ticket-icon-selected {
+    visibility: visible;
+}
+
+.select-ticket-icon-unselected {
+    visibility: visible;
+}
+
+.selected .select-ticket-icon-unselected {
+    visibility: hidden;
+}
+
+.used .select-ticket-icon-unselected {
+    visibility: hidden;
+}
+
+.select-ticket-icon-used {
+    visibility: hidden;
+}
+
+.used .select-ticket-icon-used {
+    visibility: visible;
+}
+
+.select-ticket-info-list {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 6px 0 0;
+    color: #e61d8b;
+    font-size: 14px;
+    line-height: 1;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.selected .select-ticket-info-list {
+    color: white;
+}
+
+.used .select-ticket-info-list {
+    color: black;
+}
+
+.select-ticket-name {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.select-ticket-prefix {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.select-ticket-reference-number {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.select-ticket-used {
+    /* height: 12vw;
+    width: 12vw; */
+    align-items: center;
+}
+
+.select-ticket-used-stamp {
+    display: block;
+    width: auto;
+    height: 16vw;
+    visibility: hidden;
+    object-fit: contain;
+}
+
+.used .select-ticket-used-stamp {
+    visibility: visible;
+}
+
+.select-ticket-used-date {
+    display: none;
+    margin: 0 12px 12px;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.used .select-ticket-used-date {
+    display: block;
+}

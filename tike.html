@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="none">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/static/mogiri.css">
+  <link rel="stylesheet" href="/static/style.css">
+
+  <!-- iOS対応 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="イープラス">
+
+  <!-- manifestの読み込み -->
+  <link rel="manifest" href="./manifest.json">
+  <link rel="apple-touch-icon" href="/static/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/icon/favicon-16x16.png">
+  <link rel="shortcut icon" href="/static/icon/favicon.ico">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="/static/script.js" defer></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/static/service-worker.js')
+        .then(reg => console.log('SW registered:', reg))
+        .catch(err => console.error('SW registration failed:', err));
+    }
+  </script>
+</head>
+
+<body>
+  <div class="page page1">
+    <div class="header">
+      <div class="back-btn" onclick="forceReload()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11 14L5 8L11 2" stroke="#2FA8B3" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <div class="enter" onclick="showPage2()">
+        <img src="/static/image/edsdk_btn_goto_gatepass_01.png" class="frames" data-fid="1" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_02.png" class="frames" data-fid="2" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_03.png" class="frames" data-fid="3" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_04.png" class="frames" data-fid="4" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_05.png" class="frames" data-fid="5" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_06.png" class="frames" data-fid="6" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_07.png" class="frames" data-fid="7" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_08.png" class="frames" data-fid="8" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_09.png" class="frames" data-fid="9" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_10.png" class="frames" data-fid="10" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_11.png" class="frames" data-fid="11" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_12.png" class="frames" data-fid="12" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_13.png" class="frames" data-fid="13" />
+        <img src="/static/image/edsdk_btn_goto_gatepass_14.png" class="frames" data-fid="14" />
+      </div>
+    </div>
+    <div class="main">
+      <section class="event-card">
+        <div class="content">
+          
+          <div class="multidays">
+            <p>8/15(金)・8/16(土)</p>
+          </div>
+          
+          <div class="title">
+            <span>RISING SUN ROCK FESTIVAL 2025 in EZO - ＜入場券＞</span>
+          </div>
+          <div class="venue">
+            <span>石狩湾新港樽川ふ頭横野外特設ステージ</span>
+          </div>
+        </div>
+      </section>
+      
+      <section class="ticket-card" data-index="0">
+        <div class="content">
+          <div class="ticket-header"  style="background-color: #ff9a01;" >
+            <span class="name">鈴木 辰郎 様</span>
+            <span class="index number">1枚目</span>
+          </div>
+          <div class="ticket-main dashed-bottom">
+            <div class="ticket-info">
+              <div class="status">
+                <img src="/static/image/edsdk_v3_icon_ticket_unused.png" class="ticket-unused-icon icon icon-unused">
+                <img src="/static/image/edsdk_v3_icon_ticket_gatepass.png" class="ticket-used-icon icon icon-used">
+              </div>
+              <div class="info-list">
+                <span class="name">通し入場券</span>
+                <span class="prefix hide"></span>
+                <span class="reference hide"><span class="number"></span>番</span>
+                <span class="price">¥31,000(税込)</span>
+              </div>
+              <div class="used-stamp">
+                <img src="/static/image/edsdk_v3_st_ticket_used_stamp.png" class="icon">
+              </div>
+            </div>
+            <div class="transfer">
+              <div class="button">
+                <img src="/static/image/edsdk_ic_distribution_button.png" class="icon">
+              </div>
+            </div>
+          </div>
+          <div class="description">
+            <div class="content">
+              
+              <p>RISING SUN ROCK FESTIVAL 2025 in EZO</p>
+              
+              <p>2025年8月15日(金)～17日(日)</p>
+              
+              <p>15日 Open 10:00 / Live Start 14:00 / Live End 23:00 予定</p>
+              
+              <p>16日 Open 10:00 / Live Start 12:30 / Live End 05:00 (17日)予定</p>
+              
+              <p>石狩湾新港樽川ふ頭横野外特設ステージ(雨天決行)</p>
+              
+              <p>主催・企画・お問合せ:WESS https:///rsr.wess.co.jp/2025/contact/</p>
+              
+              <p>※ご来場前にオフィシャルホームページ内の「注意事項」を必ず確認、了承の上ご来</p>
+              
+              <p>場ください。※リストバンドへ交換の上ご入場下さい。※中学生以上チケット必要。</p>
+              
+              <p>小学生までは保護者が同伴できる場合に限り無料。(小学生は年齢の確認できる</p>
+              
+              <p>身分証などをご持参ください。)※リストバンドは必ず腕に装着してください。</p>
+              
+              <p>紛失の場合は退場して頂きますので予めご了承ください。</p>
+              
+              <p>※開催期間中の出入りは自由ですが、リストバンドの再発行は致しません。</p>
+              
+              <p>RISING SUN ROCK</p>
+              
+              <p>FESTIVAL</p>
+              
+              <p>2025 in EZO</p>
+              
+              <p>
+                &lt;営利目的の転売禁止&gt;
+              </p>
+              <p>
+                イープラス 050-3185-6483
+              </p>
+              <p>
+                <a class="back-info" href="https://eplus.jp/s/page/guide/sp-app3/spticket/ticket_rimen.html">チケット裏面情報
+                  〉</a>
+              </p>
+            </div>
+            <div class="footer">
+              <p class="ticket-number">チケット番号：1150058966044</p>
+              <p class="ticket-used-date">使用日時：<span class="used-timestamp number">null</span></p>
+            </div>
+          </div>
+          <div class="arrow-button">
+            <img src="/static/image/edsdk_v3_icon_arrow_up.png" class="icon">
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  </div>
+  <div class="page page2">
+    <div class="header">
+      <p class="selected-ticket-count"><span class="number selected" id="selected-ticket-count"><span id="use-ticket-count"></span>/<span id="total-ticket-count"></span></span>枚 選択中</p>
+      <div class="close-btn" onclick="hidePage2()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 14L8 8M8 8L14 2M8 8L2 14M8 8L2 2" stroke="#A2A2A2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+    <div class="main">
+      <div class="timestamp-container">
+        <div class="timestamp">
+          <span id="date" class="number"></span>
+          <span id="day"></span>
+          <span id="time"><span class="digit number" id="h1">0</span><span class="digit number" id="h2">0</span><span class="sep">:</span><span class="digit number" id="m1">0</span><span class="digit number" id="m2">0</span><span class="sep">:</span><span class="digit number" id="s1">0</span><span class="digit number" id="s2">0</span><span class="sep">.</span><span class="digit number" id="ms1">0</span><span class="digit number" id="ms2">0</span></span>
+        </div>
+      </div>
+      <section class="mogiri-card-section">
+        <div class="mogiri-card">
+          <div class="mogiri-card-main" id="mogiri-main">
+            
+            <div class="mogiri-date-only">
+              <p class="mogiri-multi-date">8/15(金)・8/16(土)</p>
+            </div>
+            
+            <div class="mogiri-card-touch">
+              <img src="/static/image/edsdk_v3_icon_gate_star.png" class="mogiri-card-touch-image">
+              <img src="/static/image/edsdk_v3_icon_gate_star.png" class="mogiri-card-touch-image">
+            </div>
+            <div class="mogiri-title-venue">
+              <span class="mogiri-title-text">RISING SUN ROCK FESTIVAL 2025 in EZO - ＜入場券＞</span>
+              <span class="mogiri-venue-text">石狩湾新港樽川ふ頭横野外特設ステージ</span>
+            </div>
+          </div>
+          <div class="mogiri-card-background" id="mogiri-background"></div>
+          <div class="mogiri-card-used" id="mogiri-used">
+            <div class="mogiri-card-used-content">
+              <span><span id="used-ticket-count"></span> 枚使用しました</span>
+            </div>
+          </div>
+          <div class="mogiri-card-content" id="mogiri-swiper">
+            <div class="mogiri-card-foreground" id="mogiri-foreground">
+              <div class="mogiri-card-foreground-gate">
+                <img src="/static/image/edsdk_v3_icon_gate.png" class="mogiri-card-foreground-image">
+              </div>
+              <div class="mogiri-card-foreground-gate-animation">
+                <img src="/static/image/edsdk_v3_anim_gate_01.png" class="gate-frame frame1">
+                <img src="/static/image/edsdk_v3_anim_gate_02.png" class="gate-frame frame2">
+                <img src="/static/image/edsdk_v3_anim_gate_03.png" class="gate-frame frame3">
+                <img src="/static/image/edsdk_v3_anim_gate_04.png" class="gate-frame frame4">
+                <img src="/static/image/edsdk_v3_anim_gate_05.png" class="gate-frame frame5">
+                <img src="/static/image/edsdk_v3_anim_gate_06.png" class="gate-frame frame6">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="select-ticket-list">
+          
+          <div class="select-ticket-card dashed-top unused selected" data-index="0">
+            <div class="select-ticket-header">
+              <p class="select-ticket-owner-name">鈴木 辰郎 様</p>
+            </div>
+            <div class="select-ticket-main">
+              <div class="select-ticket-info">
+                <div class="select-ticket-icon">
+                  <img src="/static/image/edsdk_v3_icon_ticket_selected.png" class="select-ticket-icon-selected">
+                  <img src="/static/image/edsdk_v3_icon_ticket_unselected.png" class="select-ticket-icon-unselected"></img>
+                  <img src="/static/image/edsdk_v3_icon_ticket_gatepass.png" class="select-ticket-icon-used"></img>
+                </div>
+                <div class="select-ticket-info-list number">
+                  <span class="select-ticket-name">通し入場券</span>
+                  <span class="select-ticket-prefix hide"></span>
+                  <span class="select-ticket-reference-number hide"><span class="number"></span>番</span>
+                </div>
+                <div class="select-ticket-used">
+                  <img src="/static/image/edsdk_v3_st_ticket_used_stamp.png" class="select-ticket-used-stamp">
+                </div>
+              </div>
+              <p class="select-ticket-used-date">使用日時：<span class="used-timestamp number">null</span></p>
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+    <div class="mogiri-caution" id="mogiri-caution">
+      <p class="mogiri-caution-text">スライドすると使用済になります。<br>使用済チケットは、入場・再発行不可</p>
+    </div>
+  </div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8b716c1e4c2444298861a62ce4e5acb7","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
