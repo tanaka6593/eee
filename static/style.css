@@ -17,7 +17,7 @@ img {
 @font-face {
   /* Thin */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_thin.ttf") format("truetype");
+  src: url("./font/sf_pro_text_thin.ttf") format("truetype");
   font-weight: 100;
   font-style: normal;
   font-display: block;
@@ -25,7 +25,7 @@ img {
 @font-face {
   /* Light */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_light.ttf") format("truetype");
+  src: url("./font/sf_pro_text_light.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
   font-display: block;
@@ -33,7 +33,7 @@ img {
 @font-face {
   /* Regular */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_regular.ttf") format("truetype");
+  src: url("./font/sf_pro_text_regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: block;
@@ -41,7 +41,7 @@ img {
 @font-face {
   /* Medium */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_medium.ttf") format("truetype");
+  src: url("./font/sf_pro_text_medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
   font-display: block;
@@ -49,7 +49,7 @@ img {
 @font-face {
   /* Semi Bold */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_semibold.ttf") format("truetype");
+  src: url("./font/sf_pro_text_semibold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
   font-display: block;
@@ -57,7 +57,7 @@ img {
 @font-face {
   /* Bold */
   font-family: "SF Pro Text";
-  src: url("./static/font/sf_pro_text_bold.ttf") format("truetype");
+  src: url("./font/sf_pro_text_bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: block;
