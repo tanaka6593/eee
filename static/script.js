@@ -391,14 +391,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const state = button.classList.contains('up');
             button.classList.toggle('up', !state);
             if (state) {
-                image.src = "static/image/edsdk_v3_icon_arrow_up.png";
+                image.src = "./static/image/edsdk_v3_icon_arrow_up.png";
                 description.style.height = description.scrollHeight + 'px';
                 description.addEventListener('transitionend', function handler() {
                     description.style.height = 'auto';
                     description.removeEventListener('transitionend', handler);
                 });
             } else {
-                image.src = "static/image/edsdk_v3_icon_arrow_down.png";
+                image.src = "./static/image/edsdk_v3_icon_arrow_down.png";
                 description.style.height = description.scrollHeight + 'px';
                 requestAnimationFrame(() => {
                     description.style.height = '45px';
